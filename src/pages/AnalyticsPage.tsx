@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FileQuestion, SearchCheck, Database, Wand2 } from 'lucide-react';
-import { publicDatasets } from '../data/datasets';
+import type { Dataset } from '../types/dataset';
 
 const AnalyticsPage: React.FC = () => {
+  const [datasets, setDatasets] = useState<Dataset[]>([]);
   const [selectedDataset, setSelectedDataset] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [results, setResults] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/datasets')
+      .then(res => res.json())
+      .then(data => setDatasets(data));
+  }, []);
 
   const handleAnalyze = () => {
     if (!selectedDataset || !query) return;
@@ -40,7 +47,7 @@ const AnalyticsPage: React.FC = () => {
             </h2>
             
             <div className="space-y-2 mt-4">
-              {publicDatasets.map(dataset => (
+              {datasets.map(dataset => (
                 <div 
                   key={dataset.id}
                   onClick={() => setSelectedDataset(dataset.id)}

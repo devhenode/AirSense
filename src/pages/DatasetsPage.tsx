@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Filter, Download } from 'lucide-react';
-import { publicDatasets } from '../data/datasets';
 import DatasetCard from '../components/DatasetCard';
+import type { Dataset } from '../types/dataset';
 
 const DatasetsPage: React.FC = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [datasets, setDatasets] = useState<Dataset[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/datasets')
+      .then(res => res.json())
+      .then(data => setDatasets(data));
+  }, []);
 
   const categories = Array.from(
-    new Set(publicDatasets.map(dataset => dataset.category))
+    new Set(datasets.map(dataset => dataset.category))
   );
 
-  const filteredDatasets = publicDatasets.filter(dataset => {
+  const filteredDatasets = datasets.filter(dataset => {
     const matchesSearch = dataset.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           dataset.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = categoryFilter ? dataset.category === categoryFilter : true;
