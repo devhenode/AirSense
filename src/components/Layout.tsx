@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Database, Home, BarChart, Moon, Sun, Menu, X } from 'lucide-react';
+import { Database, Home, BarChart, Moon, Sun, Menu, X, CloudCog } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 interface LayoutProps {
@@ -17,6 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { path: '/', label: 'Home', icon: <Home className="w-5 h-5" /> },
     { path: '/datasets', label: 'Datasets', icon: <Database className="w-5 h-5" /> },
     { path: '/analytics', label: 'Analytics', icon: <BarChart className="w-5 h-5" /> },
+    { path: '/environmental', label: 'Environment', icon: <CloudCog className="w-5 h-5" /> },
   ];
 
   return (

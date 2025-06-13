@@ -1,9 +1,8 @@
-// server/data-ingestion.js
 const { MongoClient } = require('mongodb');
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-async function fetchEnvironmentalData() {
+async function fetchEnvironmentalData(lat, lon) {
   try {
     // Connect to MongoDB
     const client = new MongoClient(process.env.MONGODB_URI);
@@ -15,9 +14,9 @@ async function fetchEnvironmentalData() {
     const aqResponse = await fetch('https://api.openaq.org/v2/locations?limit=100');
     const aqData = await aqResponse.json();
     
-    // Fetch temperature data (example using OpenWeatherMap API)
+    // Fetch temperature data using provided lat/lon
     const weatherResponse = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=YourCity&appid=${process.env.OPENWEATHER_API_KEY}`
+      `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${process.env.OPENWEATHER_API_KEY}`
     );
     const weatherData = await weatherResponse.json();
     
@@ -36,12 +35,12 @@ async function fetchEnvironmentalData() {
           unit: p.unit
         }))
       })),
-      temperatureData: {
-        location: weatherData.name,
-        temperature: weatherData.main.temp,
-        humidity: weatherData.main.humidity,
-        conditions: weatherData.weather[0].description
-      }
+      temperatureData: weatherData.current ? {
+        location: `Lat: ${lat}, Lon: ${lon}`,
+        temperature: weatherData.current.temp,
+        humidity: weatherData.current.humidity,
+        conditions: weatherData.current.weather[0].description
+      } : {}
     };
     
     await collection.insertOne(processedData);
@@ -55,7 +54,13 @@ async function fetchEnvironmentalData() {
 
 // Execute if run directly
 if (require.main === module) {
-  fetchEnvironmentalData();
+  // Get lat/lon from command line arguments
+  const [, , lat, lon] = process.argv;
+  if (!lat || !lon) {
+    console.error('Usage: node data-ingestion.js <latitude> <longitude>');
+    process.exit(1);
+  }
+  fetchEnvironmentalData(lat, lon);
 }
 
 module.exports = { fetchEnvironmentalData };
