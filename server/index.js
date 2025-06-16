@@ -664,5 +664,99 @@ async function startServer() {
   }
 }
 
+// New endpoint to fetch environmental data for a specific location
+app.get('/api/environmental/location', async (req, res) => {
+  try {
+    const lat = parseFloat(req.query.lat) || 40.7128;  // Default to New York
+    const lon = parseFloat(req.query.lon) || -74.0060;
+    
+    console.log(`Fetching environmental data for lat: ${lat}, lon: ${lon}`);
+    
+    // Use the data ingestion service to fetch data
+    const { fetchEnvironmentalData } = require('./data-ingestion');
+    const data = await fetchEnvironmentalData(lat, lon);
+    
+    if (!data) {
+      throw new Error('Failed to fetch environmental data');
+    }
+    
+    // Process the data for the frontend
+    const { calculateRiskLevel } = require('./ai-analysis');
+    
+    // Extract AQ measurements (if any)
+    let pm25 = 10; // Default values if not found in AQ data
+    let pm10 = 20;
+    
+    // Try to get real air quality measurements if available
+    if (data?.aqData && data.aqData.length > 0) {
+      for (const location of data.aqData) {
+        if (location.measurements && location.measurements.length > 0) {
+          for (const measurement of location.measurements) {
+            if (measurement.parameter === 'pm25') {
+              pm25 = measurement.value;
+            }
+            if (measurement.parameter === 'pm10') {
+              pm10 = measurement.value;
+            }
+          }
+        }
+      }
+    }
+    
+    // Make sure weather data exists
+    const weather = data.weather || {
+      temperature: 25,
+      humidity: 60,
+      conditions: "Unknown"
+    };
+    
+    // Calculate risk level
+    const riskLevel = calculateRiskLevel ? 
+      calculateRiskLevel(pm25, pm10, weather.temperature) :
+      "Moderate"; // Fallback if function not available
+    
+    // Format response for frontend
+    const response = {
+      location: data.location || "Unknown location",
+      timestamp: data.timestamp || new Date().toISOString(),
+      coordinates: data.coordinates || { latitude: lat, longitude: lon },
+      temperature: weather.temperature,
+      feels_like: weather.feels_like || weather.temperature,
+      humidity: weather.humidity || 60,
+      wind_speed: weather.wind_speed || 5,
+      wind_direction: weather.wind_direction || 0,
+      pressure: weather.pressure || 1013,
+      uv_index: weather.uv_index || 5,
+      pm25: pm25,
+      pm10: pm10,
+      conditions: weather.conditions || "Unknown",
+      icon: weather.icon || "01d", // Default to clear sky if no icon
+      riskLevel: riskLevel,
+      hourlyForecast: data.hourly || [],
+      dailyForecast: data.daily || []
+    };
+    
+    res.json(response);
+  } catch (err) {
+    console.error('Error fetching location-specific environmental data:', err);
+    // Return a fallback response with error message
+    res.status(500).json({
+      error: err.message,
+      location: "Error fetching data",
+      timestamp: new Date().toISOString(),
+      coordinates: { 
+        latitude: parseFloat(req.query.lat) || 40.7128, 
+        longitude: parseFloat(req.query.lon) || -74.0060 
+      },
+      temperature: 25,
+      humidity: 60,
+      pm25: 10,
+      pm10: 20,
+      conditions: "Data unavailable",
+      riskLevel: "Moderate"
+    });
+  }
+});
+
 // Start the server
 startServer();

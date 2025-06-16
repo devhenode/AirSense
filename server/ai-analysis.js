@@ -248,4 +248,9 @@ if (require.main === module) {
   analyzeEnvironmentalData();
 }
 
-module.exports = { analyzeEnvironmentalData, calculateRiskLevel, detectAnomalies };
+// Export functions
+module.exports = {
+  analyzeEnvironmentalData,
+  detectAnomalies,
+  calculateRiskLevel
+};

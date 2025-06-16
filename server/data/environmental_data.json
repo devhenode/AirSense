@@ -1,0 +1,19 @@
+[
+  {
+    "timestamp": "2025-06-16T17:53:47.014Z",
+    "location": "Location (6.7870511, 3.9349424)",
+    "coordinates": {
+      "latitude": 6.7870511,
+      "longitude": 3.9349424
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 25,
+      "feels_like": 26,
+      "humidity": 60,
+      "conditions": "Unknown"
+    },
+    "hourly": [],
+    "daily": []
+  }
+]
