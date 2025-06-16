@@ -21,17 +21,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div className="flex h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
       {/* Mobile menu overlay */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" onClick={() => setIsMenuOpen(false)} />
       )}
 
-      {/* Mobile menu */}
+      {/* Sidebar - fixed on mobile, static on desktop */}
       <div 
-        className={`fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 z-50 transform ${
+        className={`fixed lg:static top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 z-50 transform ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:w-64 lg:min-h-screen lg:block`}
+        } transition-transform duration-200 ease-in-out lg:translate-x-0 shadow-lg lg:shadow-none`}
       >
         <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
           <h1 className="text-xl font-bold">MongoDB Explorer</h1>
@@ -62,19 +62,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </nav>
       </div>
 
-      {/* Main content */}
-      <div className="flex flex-col min-h-screen lg:ml-64">
-        {/* Header */}
+      {/* Content area - flexes to fill remaining space */}
+      <div className="flex flex-col flex-1 overflow-hidden">
+        {/* Header - now properly above content */}
         <header className="bg-white dark:bg-gray-800 shadow-sm z-10">
           <div className="flex items-center justify-between p-4">
             <button onClick={() => setIsMenuOpen(true)} className="lg:hidden">
               <Menu className="w-6 h-6" />
             </button>
             
-            <div className="flex items-center">
+            <div className="flex items-center ml-auto">
               <button 
                 onClick={toggleTheme}
-                className="ml-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -83,8 +83,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         </header>
 
-        {/* Content */}
-        <main className="flex-grow p-4 md:p-6 lg:p-8 overflow-auto">
+        {/* Content - scrollable area */}
+        <main className="flex-1 p-4 md:p-6 lg:p-8 overflow-auto">
           {children}
         </main>
 

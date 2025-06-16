@@ -1,5 +1,7 @@
 const { MongoClient } = require('mongodb');
 const { generateEmbeddings } = require('./search-service');
+const fs = require('fs');
+const path = require('path');
 require('dotenv').config();
 
 // For simple anomaly detection without a full AI platform
@@ -47,17 +49,66 @@ function calculateRiskLevel(pm25, pm10, temperature) {
 
 async function analyzeEnvironmentalData() {
   try {
-    const client = new MongoClient(process.env.MONGODB_URI);
-    await client.connect();
-    const db = client.db(process.env.MONGODB_DB);
-    const collection = db.collection('environmental_data');
+    let recentData = [];
+    let usingFileStorage = false;
+    let client = null;
     
-    // Get the most recent data
-    const recentData = await collection
-      .find({})
-      .sort({ timestamp: -1 })
-      .limit(24) // Last 24 hours if hourly data
-      .toArray();
+    // Check if we're using file-based storage
+    const flagPath = path.join(__dirname, 'data', 'using-file-storage.flag');
+    if (fs.existsSync(flagPath)) {
+      console.log('Using file-based storage for analysis');
+      usingFileStorage = true;
+      
+      // Read environmental data from file
+      const envDataPath = path.join(__dirname, 'data', 'environmental_data.json');
+      if (fs.existsSync(envDataPath)) {
+        try {
+          const allData = JSON.parse(fs.readFileSync(envDataPath, 'utf8'));
+          // Sort and get the most recent data (up to 24 entries)
+          recentData = allData
+            .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+            .slice(0, 24);
+        } catch (err) {
+          console.error('Error reading environmental data file:', err);
+          recentData = [];
+        }
+      }
+    } else {
+      // Try connecting to MongoDB
+      try {
+        client = new MongoClient(process.env.MONGODB_URI);
+        await client.connect();
+        const db = client.db(process.env.MONGODB_DB);
+        const collection = db.collection('environmental_data');
+        
+        // Get the most recent data
+        recentData = await collection
+          .find({})
+          .sort({ timestamp: -1 })
+          .limit(24) // Last 24 hours if hourly data
+          .toArray();
+      } catch (dbErr) {
+        console.error('MongoDB connection failed, using file storage:', dbErr.message);
+        usingFileStorage = true;
+        
+        // Create flag file to indicate we're using file storage
+        fs.writeFileSync(flagPath, 'true');
+        
+        // Try to read from file as fallback
+        const envDataPath = path.join(__dirname, 'data', 'environmental_data.json');
+        if (fs.existsSync(envDataPath)) {
+          try {
+            const allData = JSON.parse(fs.readFileSync(envDataPath, 'utf8'));
+            recentData = allData
+              .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+              .slice(0, 24);
+          } catch (err) {
+            console.error('Error reading environmental data file:', err);
+            recentData = [];
+          }
+        }
+      }
+    }
     
     // Process each location
     const results = [];
@@ -90,17 +141,63 @@ async function analyzeEnvironmentalData() {
         });
       }
     }
-    
-    // Store analysis results
-    await db.collection('analysis_results').insertMany(results);
-    console.log(`Analysis completed for ${results.length} location data points`);
+      // Store analysis results
+    if (usingFileStorage) {
+      // Ensure data directory exists
+      const dataDir = path.join(__dirname, 'data');
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+      
+      // Path for analysis results
+      const analysisPath = path.join(dataDir, 'analysis_results.json');
+      
+      // Read existing results or create new array
+      let existingResults = [];
+      if (fs.existsSync(analysisPath)) {
+        try {
+          existingResults = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
+          if (!Array.isArray(existingResults)) existingResults = [];
+        } catch (err) {
+          console.warn('Could not parse existing analysis results file, creating new one');
+        }
+      }
+      
+      // Add new results and write back to file
+      existingResults = [...existingResults, ...results];
+      fs.writeFileSync(analysisPath, JSON.stringify(existingResults, null, 2));
+      console.log(`Analysis completed for ${results.length} location data points, stored in file`);
+    } else {
+      // Store in MongoDB
+      await db.collection('analysis_results').insertMany(results);
+      console.log(`Analysis completed for ${results.length} location data points, stored in MongoDB`);
+    }
     
     // For anomaly detection, we need time series data
-    const timeSeriesData = await collection
-      .find({ 'aqData.location': 'SomeSpecificLocation' })
-      .sort({ timestamp: 1 })
-      .limit(100)
-      .toArray();
+    let timeSeriesData = [];
+    
+    if (usingFileStorage) {
+      // Read from file
+      const envDataPath = path.join(__dirname, 'data', 'environmental_data.json');
+      if (fs.existsSync(envDataPath)) {
+        try {
+          const allData = JSON.parse(fs.readFileSync(envDataPath, 'utf8'));
+          timeSeriesData = allData
+            .filter(entry => entry.aqData.some(loc => loc.location === 'SomeSpecificLocation'))
+            .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp))
+            .slice(0, 100);
+        } catch (err) {
+          console.error('Error reading environmental data file for time series:', err);
+        }
+      }
+    } else {
+      // Get from MongoDB
+      timeSeriesData = await collection
+        .find({ 'aqData.location': 'SomeSpecificLocation' })
+        .sort({ timestamp: 1 })
+        .limit(100)
+        .toArray();
+    }
     
     const pm25Series = timeSeriesData.map(entry => ({
       timestamp: entry.timestamp,
@@ -109,15 +206,38 @@ async function analyzeEnvironmentalData() {
     }));
     
     const anomalyResults = detectAnomalies(pm25Series);
-    
-    await db.collection('anomaly_detection').insertOne({
+      const anomalyEntry = {
       timestamp: new Date(),
       location: 'SomeSpecificLocation',
       parameter: 'pm25',
       anomalies: anomalyResults.filter(item => item.isAnomaly)
-    });
+    };
     
-    await client.close();
+    if (usingFileStorage) {
+      // Store anomaly results to file
+      const anomalyPath = path.join(__dirname, 'data', 'anomaly_detection.json');
+      
+      // Read existing anomalies or create new array
+      let existingAnomalies = [];
+      if (fs.existsSync(anomalyPath)) {
+        try {
+          existingAnomalies = JSON.parse(fs.readFileSync(anomalyPath, 'utf8'));
+          if (!Array.isArray(existingAnomalies)) existingAnomalies = [];
+        } catch (err) {
+          console.warn('Could not parse existing anomalies file, creating new one');
+        }
+      }
+      
+      // Add new anomaly and write back to file
+      existingAnomalies.push(anomalyEntry);
+      fs.writeFileSync(anomalyPath, JSON.stringify(existingAnomalies, null, 2));
+      console.log('Anomaly detection results stored in file');
+    } else {
+      // Store in MongoDB
+      await db.collection('anomaly_detection').insertOne(anomalyEntry);
+      console.log('Anomaly detection results stored in MongoDB');
+      await client.close();
+    }
   } catch (error) {
     console.error('Error analyzing environmental data:', error);
   }

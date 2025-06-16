@@ -15,13 +15,28 @@ const DatasetDetailPage: React.FC = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/datasets/${id}`)
-      .then(res => res.json())
+    
+    // Don't try to fetch if ID is undefined
+    if (!id) {
+      setLoading(false);
+      return;
+    }
+    
+    fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/datasets/${id}`)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`Failed to fetch dataset: ${res.status}`);
+        }
+        return res.json();
+      })
       .then(data => {
         setDataset(data);
         setLoading(false);
       })
-      .catch(() => setLoading(false));
+      .catch(error => {
+        console.error('Error fetching dataset:', error);
+        setLoading(false);
+      });
   }, [id]);
 
   if (!dataset && !loading) {

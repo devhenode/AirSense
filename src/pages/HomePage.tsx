@@ -31,7 +31,8 @@ const HomePage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto">
       {/* Hero section */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 md:p-12">
+      <section className="relative 
+       rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 md:p-12">
         <div className="max-w-3xl">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Explore, Analyze, and Visualize Data with MongoDB

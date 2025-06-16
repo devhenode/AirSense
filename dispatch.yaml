@@ -1,0 +1,8 @@
+dispatch:
+  # Send all API requests to the server application
+  - url: "*/api/*"
+    service: default
+
+  # Send everything else to the client application
+  - url: "*/*"
+    service: default
