@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         } transition-transform duration-200 ease-in-out lg:translate-x-0 shadow-lg lg:shadow-none`}
       >
         <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
-          <h1 className="text-xl font-bold">MongoDB Explorer</h1>
+          <h1 className="text-xl font-bold">Airsense</h1>
           <button onClick={() => setIsMenuOpen(false)} className="lg:hidden">
             <X className="w-6 h-6" />
           </button>

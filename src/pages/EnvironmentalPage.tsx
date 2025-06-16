@@ -9,10 +9,10 @@ const EnvironmentalPage: React.FC = () => {
       <div className="mb-8">
         <h1 className="text-3xl font-bold flex items-center">
           <CloudCog className="w-8 h-8 mr-2 text-blue-500" />
-          Environmental Dashboard
+          Airsense Dashboard
         </h1>
         <p className="mt-2 text-gray-600 dark:text-gray-300">
-          Real-time air quality data, risk assessment, and environmental insights
+          Real-time air quality monitoring, weather data, and environmental risk assessment
         </p>
       </div>
 

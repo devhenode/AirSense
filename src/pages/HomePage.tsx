@@ -7,24 +7,24 @@ const HomePage: React.FC = () => {
 
   const features = [
     {
-      icon: <Database className="w-8 h-8 text-blue-500" />,
-      title: 'Public Datasets',
-      description: 'Access and explore curated public datasets from various domains.',
+      icon: <Globe className="w-8 h-8 text-blue-500" />,
+      title: 'Real-time Air Quality',
+      description: 'Monitor air quality metrics and environmental conditions for any location worldwide.',
     },
     {
       icon: <Search className="w-8 h-8 text-purple-500" />,
-      title: 'MongoDB Search',
-      description: 'Leverage MongoDB\'s powerful search capabilities to find insights in your data.',
+      title: 'Location-based Monitoring',
+      description: 'Search for any city or location and get instant environmental insights.',
     },
     {
       icon: <Sparkles className="w-8 h-8 text-teal-500" />,
-      title: 'AI Analysis',
-      description: 'Generate insights and visualizations powered by AI to better understand your data.',
+      title: 'AI-Powered Risk Assessment',
+      description: 'Receive AI-generated risk assessments and health recommendations based on environmental data.',
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-500" />,
-      title: 'Google Integrations',
-      description: 'Visualize geospatial data with Google Maps integration.',
+      icon: <Database className="w-8 h-8 text-green-500" />,
+      title: 'Custom Dataset Upload',
+      description: 'Upload and analyze your own environmental datasets with our powerful visualization tools.',
     },
   ];
 
@@ -35,10 +35,10 @@ const HomePage: React.FC = () => {
        rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 md:p-12">
         <div className="max-w-3xl">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Explore, Analyze, and Visualize Data with MongoDB
+            Airsense: Environmental Monitoring Platform
           </h1>
           <p className="text-lg md:text-xl mb-8 opacity-90">
-            Select from our curated public datasets and gain new insights using MongoDB's search and vector search capabilities.
+            Monitor air quality, weather conditions, and environmental risks in real-time for any location around the world.
           </p>
           <button
             onClick={() => navigate('/datasets')}
