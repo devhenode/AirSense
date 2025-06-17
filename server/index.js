@@ -937,24 +937,56 @@ app.post('/api/environmental/analyze-location', async (req, res) => {
         `Location at ${coordinates.latitude}, ${coordinates.longitude}` : 
         'Unspecified location';
     }
-    
-    // Perform Gemini analysis
-    const analysis = await analyzeLocationWithGemini(locationName, environmentalData);
-    
-    res.json({
-      location: locationName,
-      coordinates: coordinates || null,
-      timestamp: new Date().toISOString(),
-      analysis: analysis.analysis,
-      source: analysis.source,
-      hasRealData: analysis.hasRealData,
-      environmentalData: environmentalData
-    });
+      // Perform Gemini analysis
+    try {
+      const analysis = await analyzeLocationWithGemini(locationName, environmentalData);
+      
+      res.json({
+        location: locationName,
+        coordinates: coordinates || null,
+        timestamp: new Date().toISOString(),
+        analysis: analysis.analysis,
+        source: analysis.source,
+        hasRealData: analysis.hasRealData,
+        environmentalData: environmentalData
+      });
+    } catch (aiError) {
+      console.error('AI analysis failed:', aiError);
+      
+      // Provide a fallback analysis when AI service fails
+      let fallbackAnalysis = 'Unable to generate AI analysis due to service limitations. ';
+      
+      if (environmentalData) {
+        fallbackAnalysis += `\n\nEnvironmental data for ${locationName}:\n`;
+        fallbackAnalysis += `Temperature: ${environmentalData.temperature}°C\n`;
+        fallbackAnalysis += `Humidity: ${environmentalData.humidity}%\n`;
+        if (environmentalData.wind_speed) fallbackAnalysis += `Wind Speed: ${environmentalData.wind_speed} m/s\n`;
+        if (environmentalData.pm25) fallbackAnalysis += `PM2.5: ${environmentalData.pm25} μg/m³\n`;
+        if (environmentalData.pm10) fallbackAnalysis += `PM10: ${environmentalData.pm10} μg/m³\n`;
+        if (environmentalData.conditions) fallbackAnalysis += `Conditions: ${environmentalData.conditions}\n`;
+        
+        fallbackAnalysis += '\nFor environmental analysis, please try again later when the AI service is available.';
+      } else {
+        fallbackAnalysis += `\n\nNo environmental data is available for ${locationName}. Please try another location or check back later.`;
+      }
+      
+      // Return the data we have with a fallback analysis
+      res.json({
+        location: locationName,
+        coordinates: coordinates || null,
+        timestamp: new Date().toISOString(),
+        analysis: fallbackAnalysis,
+        source: 'System Fallback (AI Unavailable)',
+        hasRealData: !!environmentalData,
+        environmentalData: environmentalData,
+        aiError: aiError.message
+      });
+    }
   } catch (err) {
     console.error('Error analyzing location:', err);
     res.status(500).json({ 
       error: err.message,
-      suggestion: 'Try a different location or check if the AI service is available.'
+      suggestion: 'Try a different location or check if the service is available.'
     });
   }
 });

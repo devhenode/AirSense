@@ -11,11 +11,30 @@ if (!apiKey) {
 // Initialize the Generative AI SDK
 const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
+/** * List available Gemini models
+ * @returns {Promise<Array<string>>} Array of available model names
+ */
+async function listAvailableModels() {
+  if (!genAI) {
+    console.error('Gemini AI service is not initialized. Missing API key.');
+    return [];
+  }
+  try {
+    // Most likely one of these models will be available
+    const potentialModels = ['gemini-2.0-flash', 'gemini-pro', 'gemini-1.5-pro', 'gemini-1.5-flash'];
+    console.log('Attempting to identify available Gemini models...');
+    return potentialModels;
+  } catch (error) {
+    console.error('Error listing Gemini models:', error);
+    return [];
+  }
+}
+
 /**
  * Generate a text response using Gemini for environmental data analysis
  * @param {Object} params - Parameters for text generation
  * @param {string} params.prompt - The prompt text for Gemini
- * @param {string} [params.model='gemini-1.0-pro'] - The model to use
+ * @param {string} [params.model='gemini-pro'] - The model to use
  * @returns {Promise<string>} The generated text response
  */
 async function generateTextResponse(params) {
@@ -23,14 +42,36 @@ async function generateTextResponse(params) {
     console.error('Gemini AI service is not initialized. Missing API key.');
     return 'Unable to generate AI analysis. Please check the server configuration.';
   }
-
+  // Default to gemini-2.0-flash, but try alternatives if that fails
+  const modelOptions = ['gemini-2.0-flash', 'gemini-pro', 'gemini-1.5-pro', 'gemini-1.5-flash'];
+  let modelToUse = params.model || modelOptions[0];
+  
   try {
-    const model = genAI.getGenerativeModel({ model: params.model || 'gemini-1.0-pro' });
+    console.log(`Attempting to use Gemini model: ${modelToUse}`);
+    const model = genAI.getGenerativeModel({ model: modelToUse });
     const result = await model.generateContent(params.prompt);
     const response = result.response;
     return response.text();
   } catch (error) {
     console.error('Error generating text with Gemini:', error);
+    
+    // If we got a 404 error and we're not using the last model option, try the next one
+    if (error.status === 404 && modelOptions.indexOf(modelToUse) < modelOptions.length - 1) {
+      const nextModelIndex = modelOptions.indexOf(modelToUse) + 1;
+      const nextModel = modelOptions[nextModelIndex];
+      console.log(`Model ${modelToUse} not found. Trying next model: ${nextModel}`);
+      
+      try {
+        const fallbackModel = genAI.getGenerativeModel({ model: nextModel });
+        const fallbackResult = await fallbackModel.generateContent(params.prompt);
+        const fallbackResponse = fallbackResult.response;
+        return fallbackResponse.text();
+      } catch (fallbackError) {
+        console.error('Error with fallback Gemini model:', fallbackError);
+        throw new Error(`Gemini API error: ${fallbackError.message || 'Unknown error'}`);
+      }
+    }
+    
     throw new Error(`Gemini API error: ${error.message || 'Unknown error'}`);
   }
 }
@@ -201,5 +242,30 @@ module.exports = {
   analyzeEnvironmentalDataWithGemini,
   processNaturalLanguageQuery,
   generateGeminiEmbeddings,
-  analyzeLocationWithGemini
+  analyzeLocationWithGemini,
+  listAvailableModels
 };
+
+// If this file is run directly, try to list available models and test with a simple prompt
+if (require.main === module) {
+  console.log('Testing Gemini API...');
+  
+  if (!apiKey) {
+    console.error('GEMINI_API_KEY not found in environment. Please set it before testing.');
+    process.exit(1);
+  }
+  
+  (async () => {
+    try {
+      console.log('Attempting to list available models...');
+      const models = await listAvailableModels();
+      console.log('Potential models:', models);
+      
+      console.log('\nTesting with a simple prompt...');
+      const response = await generateTextResponse({ prompt: 'Hello! What is the current date?' });
+      console.log('Gemini response:', response);
+    } catch (error) {
+      console.error('Test failed:', error);
+    }
+  })();
+}

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Layout from '../components/Layout';
 
 // Define types for our location search
 interface Coordinates {
@@ -34,6 +33,7 @@ interface AnalysisResult {
   source: string;
   hasRealData: boolean;
   environmentalData?: EnvironmentalData;
+  aiError?: string; // Added to handle AI service errors
 }
 
 const LocationSearchPage = () => {
@@ -51,13 +51,17 @@ const LocationSearchPage = () => {
     
     setSearching(true);
     setError(null);
-    
-    try {
-      const response = await fetch(`/api/locations/search?query=${encodeURIComponent(searchQuery)}`);
+      try {
+      // Get API base URL from environment variable or use relative path
+      const apiBaseUrl = import.meta.env.VITE_API_URL || '';
+      console.log('Searching locations using API:', `${apiBaseUrl}/api/locations/search?query=${encodeURIComponent(searchQuery)}`);
+      
+      const response = await fetch(`${apiBaseUrl}/api/locations/search?query=${encodeURIComponent(searchQuery)}`);
       if (!response.ok) {
-        throw new Error('Failed to search locations');
+        throw new Error(`Failed to search locations: ${response.status} ${response.statusText}`);
       }
       const data = await response.json();
+      console.log('Search results:', data);
       setLocations(data.results || []);
     } catch (err) {
       console.error('Error searching for locations:', err);
@@ -73,9 +77,12 @@ const LocationSearchPage = () => {
     setSelectedLocation(location);
     setLoading(true);
     setError(null);
-    
-    try {
-      const response = await fetch('/api/environmental/analyze-location', {
+      try {
+      // Get API base URL from environment variable or use relative path
+      const apiBaseUrl = import.meta.env.VITE_API_URL || '';
+      console.log('Analyzing location using API:', `${apiBaseUrl}/api/environmental/analyze-location`);
+      
+      const response = await fetch(`${apiBaseUrl}/api/environmental/analyze-location`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -89,8 +96,14 @@ const LocationSearchPage = () => {
       if (!response.ok) {
         throw new Error('Failed to analyze location');
       }
+        const data = await response.json();
       
-      const data = await response.json();
+      // Check if there was an AI error but the API still returned data
+      if (data.aiError) {
+        console.warn('AI analysis unavailable, using fallback:', data.aiError);
+        // Don't set an error, since we have fallback content
+      }
+      
       setAnalysis(data);
     } catch (err) {
       console.error('Error analyzing location:', err);
@@ -100,8 +113,8 @@ const LocationSearchPage = () => {
       setLoading(false);
     }
   };
+  
   return (
-    <Layout>
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2 flex items-center">
@@ -220,19 +233,33 @@ const LocationSearchPage = () => {
                   </div>
                 )}
                 
-                {/* AI Analysis card */}
-                <div className={`bg-white rounded-lg shadow-md overflow-hidden ${analysis.environmentalData ? 'md:col-span-2' : 'md:col-span-3'}`}>
+                {/* AI Analysis card */}                <div className={`bg-white rounded-lg shadow-md overflow-hidden ${analysis.environmentalData ? 'md:col-span-2' : 'md:col-span-3'}`}>
                   <div className="px-6 py-4">
                     <h3 className="text-lg font-semibold mb-1">
                       Environmental Analysis
                     </h3>
                     <div className="text-sm text-gray-500 mb-4">
                       by {analysis.source}
+                      {analysis.aiError && (
+                        <span className="ml-2 text-amber-600 font-medium">(AI service unavailable)</span>
+                      )}
                     </div>
                     
-                    <div className="prose max-w-none whitespace-pre-line">
-                      {analysis.analysis}
-                    </div>
+                    {analysis.aiError ? (
+                      <div className="prose max-w-none">
+                        <div className="whitespace-pre-line">{analysis.analysis}</div>
+                        <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-md">
+                          <p className="text-amber-800 text-sm">
+                            <strong>Note:</strong> The AI analysis service is currently unavailable. 
+                            We've provided basic information instead. Please try again later for AI-powered insights.
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="prose max-w-none whitespace-pre-line">
+                        {analysis.analysis || 'No analysis data available'}
+                      </div>
+                    )}
                     
                     <div className="mt-4 text-xs text-gray-400">
                       Analysis generated on {new Date(analysis.timestamp).toLocaleString()}
@@ -241,11 +268,9 @@ const LocationSearchPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            </div>          )}
         </div>
       </div>
-    </Layout>
   );
 };
 
