@@ -66,5 +66,3333 @@
     },
     "hourly": [],
     "daily": []
+  },
+  {
+    "timestamp": "2025-06-17T11:49:58.586Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:01.367Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:22.401Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:29.432Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:31.511Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:33.117Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:33.456Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:34.416Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:34.421Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:57.744Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:50:59.103Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:51:04.317Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-06-17T11:53:03.926Z",
+    "location": "Odogbolu, NG",
+    "coordinates": {
+      "latitude": 6.7840189,
+      "longitude": 3.9313061
+    },
+    "aqData": [],
+    "weather": {
+      "temperature": 31.32,
+      "feels_like": 35.02,
+      "humidity": 58,
+      "uv_index": 8.75,
+      "wind_speed": 1.88,
+      "wind_direction": 191,
+      "pressure": 1014,
+      "conditions": "overcast clouds",
+      "icon": "04d"
+    },
+    "hourly": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature": 31.36,
+        "humidity": 57,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T12:00:00.000Z",
+        "temperature": 31.32,
+        "humidity": 58,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T13:00:00.000Z",
+        "temperature": 30.89,
+        "humidity": 61,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T14:00:00.000Z",
+        "temperature": 30.99,
+        "humidity": 60,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T15:00:00.000Z",
+        "temperature": 31.27,
+        "humidity": 59,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T16:00:00.000Z",
+        "temperature": 30.34,
+        "humidity": 63,
+        "conditions": "broken clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-17T17:00:00.000Z",
+        "temperature": 27.68,
+        "humidity": 75,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T18:00:00.000Z",
+        "temperature": 25.99,
+        "humidity": 82,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-17T19:00:00.000Z",
+        "temperature": 25.32,
+        "humidity": 86,
+        "conditions": "light rain",
+        "icon": "10n"
+      },
+      {
+        "timestamp": "2025-06-17T20:00:00.000Z",
+        "temperature": 24.83,
+        "humidity": 89,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T21:00:00.000Z",
+        "temperature": 24.57,
+        "humidity": 91,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T22:00:00.000Z",
+        "temperature": 24.28,
+        "humidity": 92,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-17T23:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T00:00:00.000Z",
+        "temperature": 23.96,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T01:00:00.000Z",
+        "temperature": 23.83,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T02:00:00.000Z",
+        "temperature": 23.72,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T03:00:00.000Z",
+        "temperature": 23.71,
+        "humidity": 93,
+        "conditions": "broken clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T04:00:00.000Z",
+        "temperature": 23.64,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T05:00:00.000Z",
+        "temperature": 23.65,
+        "humidity": 94,
+        "conditions": "overcast clouds",
+        "icon": "04n"
+      },
+      {
+        "timestamp": "2025-06-18T06:00:00.000Z",
+        "temperature": 24.15,
+        "humidity": 93,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T07:00:00.000Z",
+        "temperature": 25.76,
+        "humidity": 86,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T08:00:00.000Z",
+        "temperature": 27.58,
+        "humidity": 77,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T09:00:00.000Z",
+        "temperature": 28.15,
+        "humidity": 73,
+        "conditions": "overcast clouds",
+        "icon": "04d"
+      },
+      {
+        "timestamp": "2025-06-18T10:00:00.000Z",
+        "temperature": 29.1,
+        "humidity": 69,
+        "conditions": "light rain",
+        "icon": "10d"
+      }
+    ],
+    "daily": [
+      {
+        "timestamp": "2025-06-17T11:00:00.000Z",
+        "temperature_min": 23.13,
+        "temperature_max": 31.36,
+        "humidity": 57,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-18T11:00:00.000Z",
+        "temperature_min": 23.64,
+        "temperature_max": 30.07,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-19T11:00:00.000Z",
+        "temperature_min": 23.03,
+        "temperature_max": 30.74,
+        "humidity": 64,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-20T11:00:00.000Z",
+        "temperature_min": 23.4,
+        "temperature_max": 29.67,
+        "humidity": 65,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-21T11:00:00.000Z",
+        "temperature_min": 23.26,
+        "temperature_max": 28.18,
+        "humidity": 77,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-22T11:00:00.000Z",
+        "temperature_min": 23.33,
+        "temperature_max": 28.12,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-23T11:00:00.000Z",
+        "temperature_min": 22.45,
+        "temperature_max": 29.55,
+        "humidity": 67,
+        "conditions": "light rain",
+        "icon": "10d"
+      },
+      {
+        "timestamp": "2025-06-24T11:00:00.000Z",
+        "temperature_min": 22.93,
+        "temperature_max": 28.36,
+        "humidity": 76,
+        "conditions": "moderate rain",
+        "icon": "10d"
+      }
+    ]
   }
 ]

@@ -630,33 +630,8 @@ async function startServer() {
     console.log('MongoDB connection successful');
     
     // Start the server
-    app.listen(PORT, async () => {
+    app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
-      
-      // Initialize the database with sample datasets if needed
-      try {
-        await addSampleDatasets();
-      } catch (err) {
-        console.error('Error initializing sample data:', err);
-      }
-      
-      console.log(`
-========================================================
-  MongoDB Dataset Analyzer Server
-  ✅ API running on port ${PORT}
-  ✅ MongoDB connected
-  ✅ Routes initialized
-  
-  Available endpoints:
-  - GET /datasets
-  - GET /datasets/:id
-  - POST /api/fetch-environmental-data
-  - POST /api/analyze-environmental-data
-  - GET /api/environmental/current
-  - GET /api/environmental/history
-  - POST /upload-dataset
-========================================================
-`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
@@ -756,6 +731,24 @@ app.get('/api/environmental/location', async (req, res) => {
       riskLevel: "Moderate"
     });
   }
+});
+
+// Add this near your other route handlers
+app.get('/', (req, res) => {
+  res.json({
+    message: 'AirSense API is running',
+    version: '1.0.0',
+    endpoints: [
+      '/datasets',
+      '/datasets/:id',
+      '/api/environmental/current',
+      '/api/environmental/location',
+      '/api/environmental/history',
+      '/api/fetch-environmental-data',
+      '/api/analyze-environmental-data',
+      '/upload-dataset'
+    ]
+  });
 });
 
 // Start the server

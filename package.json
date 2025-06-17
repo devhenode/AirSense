@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gcloud app deploy --quiet --env-vars-file .env.yaml"
   },
   "dependencies": {
     "chart.js": "^4.4.9",

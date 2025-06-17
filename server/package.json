@@ -1,21 +1,17 @@
 {
   "name": "airsense-server",
   "version": "1.0.0",
-  "description": "Backend server for Airsense - Environmental Monitoring Platform",
+  "description": "AirSense Environmental Monitoring Platform API",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "if not exist dist mkdir dist && copy *.js dist && copy .env dist && if not exist dist\\data mkdir dist\\data && if exist data\\*.* copy data\\*.* dist\\data",
-    "postbuild": "cd dist && npm install --production",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "seed": "node sample-data.js",
-    "deploy": "npm run build && npm run start"
+  "engines": {
+    "node": ">=20.0.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "gcloud app deploy --quiet",
+    "logs": "gcloud app logs tail -s default",
+    "seed": "node sample-data.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "csv-parser": "^3.2.0",

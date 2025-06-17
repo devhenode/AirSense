@@ -1,0 +1,22 @@
+# AirSense - Environmental Monitoring Platform
+runtime: nodejs20
+
+env_variables:
+  NODE_ENV: "production"
+  MONGODB_URI: "mongodb+srv://Henode:PasswordUserdb@cluster0.q0vzejg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  MONGODB_DB: "environmental_data"
+  MONGODB_COLLECTION: "datasets"
+  OPENWEATHER_API_KEY: "a25037f6d8ef17f96b08a597d1716fa4"
+
+handlers:
+  # API Routes
+  - url: /.*
+    script: auto
+    secure: always
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
+  min_idle_instances: 1
+  min_pending_latency: 30ms
+  max_concurrent_requests: 50
