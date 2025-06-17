@@ -7,7 +7,7 @@
     "sourceUrl": "https://openaq.org",
     "format": "CSV",
     "license": "Open Data License",
-    "lastUpdated": "2025-06-17T08:35:45.716Z",
+    "lastUpdated": "2025-06-17T09:27:56.720Z",
     "records": 15000,
     "hasGeospatialData": true,
     "schema": [
@@ -49,16 +49,7 @@
     ],
     "sampleData": [
       {
-        "timestamp": "2025-06-17T08:35:45.717Z",
-        "location": "New York",
-        "parameter": "PM2.5",
-        "value": 13,
-        "unit": "µg/m³",
-        "latitude": 40.7128,
-        "longitude": -74.006
-      },
-      {
-        "timestamp": "2025-06-16T08:35:45.717Z",
+        "timestamp": "2025-06-17T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
         "value": 23,
@@ -67,7 +58,25 @@
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-15T08:35:45.717Z",
+        "timestamp": "2025-06-16T09:27:56.720Z",
+        "location": "New York",
+        "parameter": "PM2.5",
+        "value": 14,
+        "unit": "µg/m³",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "timestamp": "2025-06-15T09:27:56.720Z",
+        "location": "New York",
+        "parameter": "PM2.5",
+        "value": 24,
+        "unit": "µg/m³",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "timestamp": "2025-06-14T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
         "value": 25,
@@ -76,64 +85,55 @@
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-14T08:35:45.717Z",
+        "timestamp": "2025-06-13T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 13,
+        "value": 11,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-13T08:35:45.717Z",
+        "timestamp": "2025-06-12T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 17,
+        "value": 25,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-12T08:35:45.717Z",
+        "timestamp": "2025-06-11T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 17,
+        "value": 28,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-11T08:35:45.717Z",
+        "timestamp": "2025-06-10T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 23,
+        "value": 27,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-10T08:35:45.717Z",
+        "timestamp": "2025-06-09T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 22,
+        "value": 14,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-09T08:35:45.717Z",
+        "timestamp": "2025-06-08T09:27:56.720Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 18,
-        "unit": "µg/m³",
-        "latitude": 40.7128,
-        "longitude": -74.006
-      },
-      {
-        "timestamp": "2025-06-08T08:35:45.717Z",
-        "location": "New York",
-        "parameter": "PM2.5",
-        "value": 24,
+        "value": 25,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
@@ -148,7 +148,7 @@
     "sourceUrl": "https://openweathermap.org",
     "format": "JSON",
     "license": "Open Data License",
-    "lastUpdated": "2025-06-17T08:35:45.717Z",
+    "lastUpdated": "2025-06-17T09:27:56.720Z",
     "records": 8500,
     "hasGeospatialData": true,
     "schema": [
@@ -193,8 +193,8 @@
         "date": "2025-06-17",
         "city": "London",
         "country": "GB",
-        "temperature": 22,
-        "humidity": 75,
+        "temperature": 16,
+        "humidity": 63,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -202,8 +202,8 @@
         "date": "2025-06-16",
         "city": "London",
         "country": "GB",
-        "temperature": 25,
-        "humidity": 76,
+        "temperature": 22,
+        "humidity": 72,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -211,8 +211,8 @@
         "date": "2025-06-15",
         "city": "London",
         "country": "GB",
-        "temperature": 19,
-        "humidity": 71,
+        "temperature": 18,
+        "humidity": 76,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -220,8 +220,8 @@
         "date": "2025-06-14",
         "city": "London",
         "country": "GB",
-        "temperature": 17,
-        "humidity": 63,
+        "temperature": 23,
+        "humidity": 65,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -230,7 +230,7 @@
         "city": "London",
         "country": "GB",
         "temperature": 24,
-        "humidity": 79,
+        "humidity": 71,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -239,7 +239,7 @@
         "city": "London",
         "country": "GB",
         "temperature": 17,
-        "humidity": 73,
+        "humidity": 68,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -247,8 +247,8 @@
         "date": "2025-06-11",
         "city": "London",
         "country": "GB",
-        "temperature": 17,
-        "humidity": 61,
+        "temperature": 19,
+        "humidity": 73,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -256,8 +256,8 @@
         "date": "2025-06-10",
         "city": "London",
         "country": "GB",
-        "temperature": 25,
-        "humidity": 79,
+        "temperature": 22,
+        "humidity": 73,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -265,8 +265,8 @@
         "date": "2025-06-09",
         "city": "London",
         "country": "GB",
-        "temperature": 24,
-        "humidity": 80,
+        "temperature": 19,
+        "humidity": 67,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -274,8 +274,8 @@
         "date": "2025-06-08",
         "city": "London",
         "country": "GB",
-        "temperature": 19,
-        "humidity": 68,
+        "temperature": 21,
+        "humidity": 66,
         "latitude": 51.5074,
         "longitude": -0.1278
       }
@@ -289,7 +289,7 @@
     "sourceUrl": "",
     "format": "JSON",
     "license": "Private",
-    "lastUpdated": "2025-06-17T08:35:45.717Z",
+    "lastUpdated": "2025-06-17T09:27:56.720Z",
     "records": 5200,
     "hasGeospatialData": true,
     "schema": [
@@ -338,9 +338,9 @@
       {
         "date": "2025-06-17",
         "location": "Singapore",
-        "pm25": 24,
-        "pm10": 39,
-        "temperature": 30,
+        "pm25": 30,
+        "pm10": 54,
+        "temperature": 27,
         "riskLevel": "Moderate",
         "latitude": 1.3521,
         "longitude": 103.8198
@@ -348,9 +348,9 @@
       {
         "date": "2025-06-16",
         "location": "Singapore",
-        "pm25": 33,
-        "pm10": 32,
-        "temperature": 23,
+        "pm25": 22,
+        "pm10": 26,
+        "temperature": 16,
         "riskLevel": "Moderate",
         "latitude": 1.3521,
         "longitude": 103.8198
@@ -358,29 +358,29 @@
       {
         "date": "2025-06-15",
         "location": "Singapore",
-        "pm25": 23,
-        "pm10": 28,
-        "temperature": 22,
-        "riskLevel": "Moderate",
+        "pm25": 39,
+        "pm10": 30,
+        "temperature": 23,
+        "riskLevel": "High",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-14",
         "location": "Singapore",
-        "pm25": 23,
-        "pm10": 29,
-        "temperature": 16,
-        "riskLevel": "Moderate",
+        "pm25": 11,
+        "pm10": 53,
+        "temperature": 17,
+        "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-13",
         "location": "Singapore",
-        "pm25": 39,
-        "pm10": 42,
-        "temperature": 22,
+        "pm25": 36,
+        "pm10": 40,
+        "temperature": 15,
         "riskLevel": "High",
         "latitude": 1.3521,
         "longitude": 103.8198
@@ -388,39 +388,39 @@
       {
         "date": "2025-06-12",
         "location": "Singapore",
-        "pm25": 26,
-        "pm10": 49,
-        "temperature": 20,
-        "riskLevel": "Moderate",
+        "pm25": 36,
+        "pm10": 34,
+        "temperature": 22,
+        "riskLevel": "High",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-11",
         "location": "Singapore",
-        "pm25": 10,
-        "pm10": 28,
-        "temperature": 17,
-        "riskLevel": "Low",
+        "pm25": 33,
+        "pm10": 51,
+        "temperature": 16,
+        "riskLevel": "Moderate",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-10",
         "location": "Singapore",
-        "pm25": 19,
-        "pm10": 53,
-        "temperature": 20,
-        "riskLevel": "Low",
+        "pm25": 33,
+        "pm10": 57,
+        "temperature": 28,
+        "riskLevel": "Moderate",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-09",
         "location": "Singapore",
-        "pm25": 11,
-        "pm10": 58,
-        "temperature": 27,
+        "pm25": 13,
+        "pm10": 56,
+        "temperature": 17,
         "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198
@@ -428,9 +428,9 @@
       {
         "date": "2025-06-08",
         "location": "Singapore",
-        "pm25": 14,
-        "pm10": 45,
-        "temperature": 19,
+        "pm25": 11,
+        "pm10": 35,
+        "temperature": 20,
         "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198

@@ -8,9 +8,11 @@ import DatasetDetailPage from './pages/DatasetDetailPage';
 import EnvironmentalPage from './pages/EnvironmentalPage';
 
 function App() {
+  const basePath = import.meta.env.BASE_URL || '/';
+
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename={basePath}>
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
