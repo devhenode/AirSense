@@ -20,6 +20,7 @@ Airsense is a comprehensive environmental monitoring application that provides r
 - **Backend**: Node.js, Express
 - **Database**: MongoDB Atlas with file-based fallback storage
 - **APIs**: OpenWeatherMap, OpenAQ
+- **AI Services**: Google Gemini AI for advanced analysis and natural language queries
 
 ## Getting Started
 
@@ -45,8 +46,8 @@ cd ..
 ```
 
 3. Set up environment variables:
-   - Create a `.env` file in the server directory
-   - Add your MongoDB URI and OpenWeatherMap API keys
+   - Create a `.env` file in the server directory using the `.env.example` template
+   - Add your MongoDB URI, OpenWeatherMap API key, and Gemini API key
 
 4. Start the development servers:
 ```

@@ -5,11 +5,9 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/Airsense/' : '/',
-  publicDir: 'public',
+  base: '/', // Changed from GitHub Pages path to root
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
   },
   resolve: {
     alias: {

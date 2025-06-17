@@ -1,0 +1,12 @@
+.git
+.gitignore
+node_modules/
+npm-debug.log
+server/node_modules/
+*.log
+test/
+__tests__/
+README.md
+.env
+.env.*
+!.env.production

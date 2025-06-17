@@ -170,9 +170,51 @@ async function fetchEnvironmentalData(lat = 40.7128, lon = -74.0060) {
   }
 }
 
+/**
+ * Search for locations using the OpenWeather geocoding API
+ * @param {string} query - The location to search for
+ * @param {number} limit - Maximum number of results to return
+ * @returns {Promise<Array>} Array of location results
+ */
+async function searchLocations(query, limit = 5) {
+  try {
+    if (!query || typeof query !== 'string') {
+      throw new Error('Invalid search query');
+    }
+    
+    console.log(`Searching for locations matching: "${query}"`);
+    
+    // Fetch location data using OpenWeather Geocoding API
+    const geoResponse = await fetch(
+      `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(query)}&limit=${limit}&appid=${process.env.OPENWEATHER_API_KEY}`
+    );
+    
+    if (!geoResponse.ok) {
+      throw new Error(`OpenWeather API error: ${geoResponse.status} ${geoResponse.statusText}`);
+    }
+    
+    const locations = await geoResponse.json();
+    
+    // Format the results
+    return locations.map(location => ({
+      name: location.name,
+      country: location.country,
+      state: location.state || '',
+      coordinates: {
+        latitude: location.lat,
+        longitude: location.lon
+      },
+      displayName: `${location.name}${location.state ? `, ${location.state}` : ''}, ${location.country}`
+    }));
+  } catch (error) {
+    console.error('Error searching for locations:', error);
+    throw error;
+  }
+}
+
 // Execute if run directly
 if (require.main === module) {
   fetchEnvironmentalData().then(() => console.log('Data fetch complete'));
 }
 
-module.exports = { fetchEnvironmentalData };
+module.exports = { fetchEnvironmentalData, searchLocations };

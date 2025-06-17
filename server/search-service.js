@@ -2,6 +2,7 @@
 const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
+const { generateGeminiEmbeddings } = require('./gemini-service');
 require('dotenv').config();
 
 async function textSearch(query, filters = {}, forcedFileStorage = false) {
@@ -21,11 +22,16 @@ async function textSearch(query, filters = {}, forcedFileStorage = false) {
         const allResults = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
         if (!Array.isArray(allResults)) return [];
         
-        // Simple text search implementation for file-based storage
+        // Enhanced text search implementation with Gemini-analyzed content
         return allResults
           .filter(item => {
-            // Text search
-            const searchText = `${item.location || ''} ${item.description || ''}`.toLowerCase();
+            // Combined text search across all text fields including AI analysis
+            const searchText = `
+              ${item.location || ''} 
+              ${item.description || ''} 
+              ${item.aiAnalysis || ''}
+            `.toLowerCase();
+            
             const matches = query.toLowerCase().split(' ').every(word => searchText.includes(word));
             
             // Apply filters
@@ -52,7 +58,7 @@ async function textSearch(query, filters = {}, forcedFileStorage = false) {
         index: "environmental_text_index",
         text: {
           query: query,
-          path: ["location", "description"]
+          path: ["location", "description", "aiAnalysis"]
         }
       }
     };
@@ -79,14 +85,32 @@ async function textSearch(query, filters = {}, forcedFileStorage = false) {
   }
 }
 
+// Function to generate vector embeddings for environmental data
+async function generateEmbeddings(data) {
+  // Use the Gemini-based embedding function (with fallback to simple embeddings)
+  try {
+    return await generateGeminiEmbeddings(data);
+  } catch (error) {
+    console.error('Error generating Gemini embeddings, falling back to simple embeddings:', error);
+    
+    // Simple fallback vector embedding generation
+    return [
+      data.pm25 / 100,
+      data.pm10 / 200,
+      (data.temperature + 20) / 60
+    ];
+  }
+}
+
+// Rest of the code remains the same
 async function findSimilarPatterns(pm25, pm10, temperature, forcedFileStorage = false) {
   try {
-    // Create a simple embedding (for production, use a proper embedding model)
-    const simpleVector = [
-      pm25 / 100,  // Normalize to 0-1 range
-      pm10 / 200,  // Normalize to 0-1 range
-      (temperature + 20) / 60  // Normalize from -20 to 40 range to 0-1
-    ];
+    // Create embedding vector for the search parameters using Gemini
+    const simpleVector = await generateEmbeddings({
+      pm25,
+      pm10,
+      temperature
+    });
     
     // Check if we're using file-based storage
     const flagPath = path.join(__dirname, 'data', 'using-file-storage.flag');
@@ -155,17 +179,6 @@ async function findSimilarPatterns(pm25, pm10, temperature, forcedFileStorage = 
     console.error('Error finding similar patterns:', error);
     throw error;
   }
-}
-
-// Function to generate vector embeddings for environmental data
-async function generateEmbeddings(data) {
-  // Simple vector embedding generation
-  // In a production app, you'd use a proper embedding model
-  return [
-    data.pm25 / 100,
-    data.pm10 / 200,
-    (data.temperature + 20) / 60
-  ];
 }
 
 module.exports = { textSearch, findSimilarPatterns, generateEmbeddings };

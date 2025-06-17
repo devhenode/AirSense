@@ -1,8 +1,8 @@
 dispatch:
-  # Send all API requests to the server application
+  # Send API requests to the backend service
   - url: "*/api/*"
     service: default
-
-  # Send everything else to the client application
+  
+  # Send all other requests to the frontend service
   - url: "*/*"
-    service: default
+    service: frontend

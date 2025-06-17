@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb');
 const { generateEmbeddings } = require('./search-service');
+const { generateGeminiEmbeddings, analyzeEnvironmentalDataWithGemini } = require('./gemini-service');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
@@ -119,14 +120,33 @@ async function analyzeEnvironmentalData() {
         const pm10Value = location.measurements.find(m => m.parameter === 'pm10')?.value || 0;
         const temperature = entry.temperatureData.temperature;
         
+        // Calculate risk level using traditional method
         const riskLevel = calculateRiskLevel(pm25Value, pm10Value, temperature);
         
-        // Generate vector embeddings for search
-        const environmentalVector = await generateEmbeddings({
+        // Generate vector embeddings for search using Gemini (fallback to simple embeddings)
+        const environmentalVector = await generateGeminiEmbeddings({
           pm25: pm25Value,
           pm10: pm10Value,
           temperature
         });
+        
+        // Generate AI analysis using Gemini
+        let aiAnalysis = null;
+        try {
+          aiAnalysis = await analyzeEnvironmentalDataWithGemini({
+            pm25: pm25Value,
+            pm10: pm10Value,
+            temperature,
+            location: location.location,
+            timestamp: entry.timestamp
+          });
+        } catch (geminiError) {
+          console.error('Error generating Gemini analysis, falling back to basic description:', geminiError);
+          aiAnalysis = {
+            analysis: `Environmental analysis for ${location.location} with PM2.5: ${pm25Value}μg/m³, PM10: ${pm10Value}μg/m³, Temperature: ${temperature}°C. Risk level: ${riskLevel}.`,
+            source: 'Basic Analysis (Gemini unavailable)'
+          };
+        }
         
         results.push({
           timestamp: entry.timestamp,
@@ -137,6 +157,8 @@ async function analyzeEnvironmentalData() {
           temperature,
           riskLevel,
           environmentalVector,
+          aiAnalysis: aiAnalysis.analysis,
+          aiSource: aiAnalysis.source || 'Gemini AI',
           description: `Environmental analysis for ${location.location} with PM2.5: ${pm25Value}μg/m³, PM10: ${pm10Value}μg/m³, Temperature: ${temperature}°C`
         });
       }
@@ -206,7 +228,7 @@ async function analyzeEnvironmentalData() {
     }));
     
     const anomalyResults = detectAnomalies(pm25Series);
-      const anomalyEntry = {
+    const anomalyEntry = {
       timestamp: new Date(),
       location: 'SomeSpecificLocation',
       parameter: 'pm25',

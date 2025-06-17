@@ -738,17 +738,225 @@ app.get('/', (req, res) => {
   res.json({
     message: 'AirSense API is running',
     version: '1.0.0',
-    endpoints: [
+  endpoints: [
       '/datasets',
       '/datasets/:id',
       '/api/environmental/current',
       '/api/environmental/location',
       '/api/environmental/history',
+      '/api/locations/search',
+      '/api/environmental/analyze-location',
+      '/api/query',
       '/api/fetch-environmental-data',
       '/api/analyze-environmental-data',
       '/upload-dataset'
     ]
   });
+});
+
+// Natural language query endpoint using Gemini AI
+app.post('/api/query', async (req, res) => {
+  try {
+    const { query } = req.body;
+    
+    if (!query || typeof query !== 'string') {
+      return res.status(400).json({ 
+        error: 'Invalid query',
+        message: 'Please provide a valid query string'
+      });
+    }
+    
+    // Import the processNaturalLanguageQuery function
+    const { processNaturalLanguageQuery } = require('./gemini-service');
+    
+    // Get recent data for context
+    let recentData = [];
+    let datasets = [];
+    
+    if (usingFileStorage) {
+      // Get datasets from file
+      if (fs.existsSync(datasetsPath)) {
+        try {
+          datasets = JSON.parse(fs.readFileSync(datasetsPath, 'utf8'));
+        } catch (err) {
+          console.error('Error reading datasets file:', err);
+        }
+      }
+      
+      // Get recent environmental analysis
+      const analysisPath = path.join(dataDir, 'analysis_results.json');
+      if (fs.existsSync(analysisPath)) {
+        try {
+          const allResults = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
+          recentData = allResults
+            .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
+            .slice(0, 5);
+        } catch (err) {
+          console.error('Error reading analysis results:', err);
+        }
+      }
+    } else {
+      try {
+        await connectToMongo();
+        
+        // Get the most recent datasets
+        datasets = await db.collection(collectionName)
+          .find({})
+          .limit(10)
+          .toArray();
+          
+        // Get recent analysis results
+        recentData = await db.collection('analysis_results')
+          .find({})
+          .sort({ timestamp: -1 })
+          .limit(5)
+          .toArray();
+      } catch (err) {
+        console.error('Error fetching context data from MongoDB:', err);
+      }
+    }
+    
+    const contextData = {
+      datasets: datasets.map(d => ({ 
+        name: d.name || 'Unnamed dataset',
+        id: d.id || d._id?.toString(),
+        description: d.description || '',
+        tags: d.tags || []
+      })),
+      recentReadings: recentData.map(r => ({
+        location: r.location,
+        pm25: r.pm25,
+        pm10: r.pm10,
+        temperature: r.temperature,
+        timestamp: r.timestamp
+      }))
+    };
+    
+    // Process the query using Gemini
+    const result = await processNaturalLanguageQuery(query, contextData);
+    
+    res.json({
+      query: result.query,
+      response: result.response,
+      timestamp: result.timestamp,
+      source: result.source
+    });
+  } catch (err) {
+    console.error('Error processing natural language query:', err);
+    res.status(500).json({ 
+      error: err.message,
+      suggestion: 'Try a different query or check if the AI service is available.'
+    });
+  }
+});
+
+// Location search endpoint using OpenWeather API
+app.get('/api/locations/search', async (req, res) => {
+  try {
+    const { query } = req.query;
+    
+    if (!query || typeof query !== 'string') {
+      return res.status(400).json({ 
+        error: 'Invalid query',
+        message: 'Please provide a valid location search query'
+      });
+    }
+    
+    // Get the searchLocations function from data-ingestion
+    const { searchLocations } = require('./data-ingestion');
+    
+    // Search for locations
+    const locations = await searchLocations(query);
+    
+    res.json({
+      query,
+      results: locations
+    });
+  } catch (err) {
+    console.error('Error searching for locations:', err);
+    res.status(500).json({ 
+      error: err.message,
+      suggestion: 'Try a different search query or check if the weather API is available.'
+    });
+  }
+});
+
+// AI-powered location environmental analysis endpoint
+app.post('/api/environmental/analyze-location', async (req, res) => {
+  try {
+    const { location, coordinates } = req.body;
+    
+    if (!location && !coordinates) {
+      return res.status(400).json({
+        error: 'Missing parameters',
+        message: 'Please provide either a location name or coordinates'
+      });
+    }
+    
+    // Import the required functions
+    const { fetchEnvironmentalData } = require('./data-ingestion');
+    const { analyzeLocationWithGemini } = require('./gemini-service');
+    
+    let environmentalData = null;
+    let locationName = location;
+    
+    // If coordinates are provided, fetch real environmental data
+    if (coordinates && coordinates.latitude && coordinates.longitude) {
+      try {
+        const lat = parseFloat(coordinates.latitude);
+        const lon = parseFloat(coordinates.longitude);
+        
+        // Fetch real-time environmental data for this location
+        const data = await fetchEnvironmentalData(lat, lon);
+        
+        // Format the environmental data for analysis
+        environmentalData = {
+          location: data.location,
+          coordinates: data.coordinates,
+          temperature: data.weather?.temperature || null,
+          humidity: data.weather?.humidity || null,
+          wind_speed: data.weather?.wind_speed || null,
+          pm25: data.aqData?.[0]?.measurements?.find(m => m.parameter === 'pm25')?.value || null,
+          pm10: data.aqData?.[0]?.measurements?.find(m => m.parameter === 'pm10')?.value || null,
+          conditions: data.weather?.conditions || null
+        };
+        
+        // If no location name was provided but we got it from the data, use that
+        if (!locationName && data.location) {
+          locationName = data.location;
+        }
+      } catch (fetchError) {
+        console.error('Error fetching environmental data:', fetchError);
+        // Continue without real data
+      }
+    }
+    
+    // If we still don't have a location name, use a placeholder
+    if (!locationName) {
+      locationName = coordinates ? 
+        `Location at ${coordinates.latitude}, ${coordinates.longitude}` : 
+        'Unspecified location';
+    }
+    
+    // Perform Gemini analysis
+    const analysis = await analyzeLocationWithGemini(locationName, environmentalData);
+    
+    res.json({
+      location: locationName,
+      coordinates: coordinates || null,
+      timestamp: new Date().toISOString(),
+      analysis: analysis.analysis,
+      source: analysis.source,
+      hasRealData: analysis.hasRealData,
+      environmentalData: environmentalData
+    });
+  } catch (err) {
+    console.error('Error analyzing location:', err);
+    res.status(500).json({ 
+      error: err.message,
+      suggestion: 'Try a different location or check if the AI service is available.'
+    });
+  }
 });
 
 // Start the server

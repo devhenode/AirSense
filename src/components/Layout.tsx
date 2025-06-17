@@ -18,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { path: '/datasets', label: 'Datasets', icon: <Database className="w-5 h-5" /> },
     { path: '/analytics', label: 'Analytics', icon: <BarChart className="w-5 h-5" /> },
     { path: '/environmental', label: 'Environment', icon: <CloudCog className="w-5 h-5" /> },
+    { path: '/location-search', label: 'Global Search', icon: <span className="w-5 h-5 flex items-center justify-center">🌍</span> },
   ];
 
   return (
