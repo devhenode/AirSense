@@ -3,11 +3,11 @@ runtime: nodejs20
 
 env_variables:
   NODE_ENV: "production"
-  MONGODB_URI: "mongodb+srv://Henode:PasswordUserdb@cluster0.q0vzejg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-  MONGODB_DB: "environmental_data"
-  MONGODB_COLLECTION: "datasets"
-  OPENWEATHER_API_KEY: "a25037f6d8ef17f96b08a597d1716fa4"
-  GEMINI_API_KEY: "AIzaSyCNPVTB1yv0vlGd4PAASr4CkXTWbTg57P8"  # Replace with your actual Gemini API key before deployment
+  MONGODB_URI: ${MONGODB_URI}
+  MONGODB_DB: ${MONGODB_DB}
+  MONGODB_COLLECTION: ${MONGODB_COLLECTION}
+  OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY}
+  GEMINI_API_KEY: ${GEMINI_API_KEY}  # Replace with your actual Gemini API key before deployment
 
 handlers:
   # API Routes
