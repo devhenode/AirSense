@@ -1,117 +1,103 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Database, Search, Sparkles, Globe } from 'lucide-react';
+import { ChevronRight, MapPin, Activity, BarChart2, FileText } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
 
-  const features = [
-    {
-      icon: <Globe className="w-8 h-8 text-blue-500" />,
-      title: 'Real-time Air Quality',
-      description: 'Monitor air quality metrics and environmental conditions for any location worldwide.',
-    },
-    {
-      icon: <Search className="w-8 h-8 text-purple-500" />,
-      title: 'Location-based Monitoring',
-      description: 'Search for any city or location and get instant environmental insights.',
-    },
-    {
-      icon: <Sparkles className="w-8 h-8 text-teal-500" />,
-      title: 'AI-Powered Risk Assessment',
-      description: 'Receive AI-generated risk assessments and health recommendations based on environmental data.',
-    },
-    {
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'Custom Dataset Upload',
-      description: 'Upload and analyze your own environmental datasets with our powerful visualization tools.',
-    },
-  ];
-
   return (
-    <div className="max-w-7xl mx-auto">
-      {/* Hero section */}
-      <section className="relative 
-       rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 md:p-12">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Airsense: Environmental Monitoring Platform
-          </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">
-            Monitor air quality, weather conditions, and environmental risks in real-time for any location around the world.
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */}
+      <div className="py-12 md:py-20 flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 mb-10 md:mb-0">
+          <div className="flex items-center mb-6">
+            <img
+              src="/airsense-logo.png"
+              alt="AirSense Logo"
+              className="h-10 mr-3"
+            />
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
+              AirSense
+            </h1>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
+            Monitor air quality and environmental conditions anywhere in the world
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+            Get real-time data on air quality, temperature, humidity, and more. Make informed decisions for your health and wellbeing based on accurate environmental information.
           </p>
-          <button
-            onClick={() => navigate('/datasets')}
-            className="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg shadow-md hover:shadow-lg transition-shadow"
-          >
-            Explore Datasets
-          </button>
-        </div>
-        
-        <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-blue-500 opacity-20 rounded-full"></div>
-        <div className="absolute top-12 -right-8 w-32 h-32 bg-purple-500 opacity-20 rounded-full"></div>
-      </section>
-
-      {/* Features section */}
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold mb-8 text-center">Key Features</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={() => navigate('/environmental')}
+              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg flex items-center transition-colors"
             >
-              <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+              Start Monitoring <ChevronRight className="ml-2 w-5 h-5" />
+            </button>
+            <button
+              onClick={() => navigate('/datasets')}
+              className="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200 font-medium rounded-lg flex items-center transition-colors"
+            >
+              Explore Datasets <ChevronRight className="ml-2 w-5 h-5" />
+            </button>
+          </div>
         </div>
-      </section>
+        <div className="md:w-1/2 md:pl-12">
+          <img
+            src="/dashboard-preview.png"
+            alt="AirSense Dashboard Preview"
+            className="rounded-lg shadow-lg w-full"
+            onError={(e) => {
+              // Fallback if the image doesn't exist
+              e.currentTarget.src = "https://via.placeholder.com/800x500?text=AirSense+Dashboard";
+            }}
+          />
+        </div>
+      </div>
 
-      {/* Getting started section */}
-      <section className="mt-16 bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm">
-        <h2 className="text-2xl font-bold mb-6">Getting Started</h2>
-        <div className="space-y-4">
-          <div className="flex items-start">
-            <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full flex items-center justify-center font-bold mr-4">1</span>
-            <div>
-              <h3 className="font-medium">Select a Dataset</h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">Browse our collection of public datasets and choose one that interests you.</p>
+      {/* Features Section */}
+      <div className="py-16 border-t border-gray-200 dark:border-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Comprehensive Environmental Monitoring
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
+              <MapPin className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Location-Based Data</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Search for any location worldwide and instantly access detailed environmental data and forecasts.
+            </p>
           </div>
-          <div className="flex items-start">
-            <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full flex items-center justify-center font-bold mr-4">2</span>
-            <div>
-              <h3 className="font-medium">Explore the Data</h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">Use our interactive tools to explore and understand the dataset structure.</p>
+          <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
+              <Activity className="w-6 h-6 text-green-600 dark:text-green-400" />
             </div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Health Risk Assessment</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Receive personalized risk levels and health recommendations based on current environmental conditions.
+            </p>
           </div>
-          <div className="flex items-start">
-            <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full flex items-center justify-center font-bold mr-4">3</span>
-            <div>
-              <h3 className="font-medium">Generate Insights</h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">Let our AI tools help you discover patterns and insights in the data.</p>
+          <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
+              <BarChart2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
             </div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Advanced Analytics</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Visualize trends, identify patterns, and analyze historical environmental data with interactive charts.
+            </p>
           </div>
-          <div className="flex items-start">
-            <span className="flex-shrink-0 w-8 h-8 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full flex items-center justify-center font-bold mr-4">4</span>
-            <div>
-              <h3 className="font-medium">Visualize Results</h3>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">Create beautiful visualizations to better understand and share your findings.</p>
+          <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mb-4">
+              <FileText className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
             </div>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Custom Dataset Analysis</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Upload your own environmental datasets for in-depth analysis and visualization using our powerful tools.
+            </p>
           </div>
         </div>
-        
-        <div className="mt-8">
-          <button
-            onClick={() => navigate('/datasets')}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm transition-colors"
-          >
-            Start Exploring
-          </button>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

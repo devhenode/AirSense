@@ -34,7 +34,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         } transition-transform duration-200 ease-in-out lg:translate-x-0 shadow-lg lg:shadow-none`}
       >
         <div className="flex items-center justify-between p-4 border-b dark:border-gray-700">
-          <h1 className="text-xl font-bold">Airsense</h1>
+          {/* Replace text with logo image */}
+          <div className="flex items-center" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+            <img 
+              src="/airsense-logo.png" 
+              alt="AirSense Logo" 
+              className="h-12 w-14" 
+            />
+          </div>
           <button onClick={() => setIsMenuOpen(false)} className="lg:hidden">
             <X className="w-6 h-6" />
           </button>
@@ -67,9 +74,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {/* Header - now properly above content */}
         <header className="bg-white dark:bg-gray-800 shadow-sm z-10">
           <div className="flex items-center justify-between p-4">
-            <button onClick={() => setIsMenuOpen(true)} className="lg:hidden">
-              <Menu className="w-6 h-6" />
-            </button>
+            <div className="flex items-center">
+              <button onClick={() => setIsMenuOpen(true)} className="lg:hidden mr-3">
+                <Menu className="w-6 h-6" />
+              </button>
+              {/* Add small logo in header for mobile */}
+              <img 
+                src="/airsense-logo.png" 
+                alt="AirSense" 
+                className="h-6 lg:hidden" 
+              />
+            </div>
             
             <div className="flex items-center ml-auto">
               <button 
@@ -89,8 +104,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </main>
 
         {/* Footer */}
-        <footer className="bg-white dark:bg-gray-800 p-4 border-t dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
-          MongoDB Data Explorer © {new Date().getFullYear()}
+        <footer className="bg-white dark:bg-gray-800 p-4 border-t dark:border-gray-700 text-center">
+          <div className="flex flex-col items-center justify-center">
+            <img 
+              src="/airsense-logo.png" 
+              alt="AirSense Logo" 
+              className="h-6 mb-2" 
+            />
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Environmental Monitoring Platform © {new Date().getFullYear()}
+            </p>
+          </div>
         </footer>
       </div>
     </div>

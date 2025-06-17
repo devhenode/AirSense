@@ -7,7 +7,7 @@
     "sourceUrl": "https://openaq.org",
     "format": "CSV",
     "license": "Open Data License",
-    "lastUpdated": "2025-06-14T17:10:56.147Z",
+    "lastUpdated": "2025-06-17T08:35:45.716Z",
     "records": 15000,
     "hasGeospatialData": true,
     "schema": [
@@ -49,25 +49,7 @@
     ],
     "sampleData": [
       {
-        "timestamp": "2025-06-14T17:10:56.148Z",
-        "location": "New York",
-        "parameter": "PM2.5",
-        "value": 11,
-        "unit": "µg/m³",
-        "latitude": 40.7128,
-        "longitude": -74.006
-      },
-      {
-        "timestamp": "2025-06-13T17:10:56.148Z",
-        "location": "New York",
-        "parameter": "PM2.5",
-        "value": 10,
-        "unit": "µg/m³",
-        "latitude": 40.7128,
-        "longitude": -74.006
-      },
-      {
-        "timestamp": "2025-06-12T17:10:56.148Z",
+        "timestamp": "2025-06-17T08:35:45.717Z",
         "location": "New York",
         "parameter": "PM2.5",
         "value": 13,
@@ -76,7 +58,25 @@
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-11T17:10:56.148Z",
+        "timestamp": "2025-06-16T08:35:45.717Z",
+        "location": "New York",
+        "parameter": "PM2.5",
+        "value": 23,
+        "unit": "µg/m³",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "timestamp": "2025-06-15T08:35:45.717Z",
+        "location": "New York",
+        "parameter": "PM2.5",
+        "value": 25,
+        "unit": "µg/m³",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "timestamp": "2025-06-14T08:35:45.717Z",
         "location": "New York",
         "parameter": "PM2.5",
         "value": 13,
@@ -85,16 +85,34 @@
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-10T17:10:56.148Z",
+        "timestamp": "2025-06-13T08:35:45.717Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 21,
+        "value": 17,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-09T17:10:56.148Z",
+        "timestamp": "2025-06-12T08:35:45.717Z",
+        "location": "New York",
+        "parameter": "PM2.5",
+        "value": 17,
+        "unit": "µg/m³",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "timestamp": "2025-06-11T08:35:45.717Z",
+        "location": "New York",
+        "parameter": "PM2.5",
+        "value": 23,
+        "unit": "µg/m³",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "timestamp": "2025-06-10T08:35:45.717Z",
         "location": "New York",
         "parameter": "PM2.5",
         "value": 22,
@@ -103,37 +121,19 @@
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-08T17:10:56.148Z",
+        "timestamp": "2025-06-09T08:35:45.717Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 14,
+        "value": 18,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
       },
       {
-        "timestamp": "2025-06-07T17:10:56.148Z",
+        "timestamp": "2025-06-08T08:35:45.717Z",
         "location": "New York",
         "parameter": "PM2.5",
-        "value": 14,
-        "unit": "µg/m³",
-        "latitude": 40.7128,
-        "longitude": -74.006
-      },
-      {
-        "timestamp": "2025-06-06T17:10:56.148Z",
-        "location": "New York",
-        "parameter": "PM2.5",
-        "value": 11,
-        "unit": "µg/m³",
-        "latitude": 40.7128,
-        "longitude": -74.006
-      },
-      {
-        "timestamp": "2025-06-05T17:10:56.148Z",
-        "location": "New York",
-        "parameter": "PM2.5",
-        "value": 22,
+        "value": 24,
         "unit": "µg/m³",
         "latitude": 40.7128,
         "longitude": -74.006
@@ -148,7 +148,7 @@
     "sourceUrl": "https://openweathermap.org",
     "format": "JSON",
     "license": "Open Data License",
-    "lastUpdated": "2025-06-14T17:10:56.148Z",
+    "lastUpdated": "2025-06-17T08:35:45.717Z",
     "records": 8500,
     "hasGeospatialData": true,
     "schema": [
@@ -190,11 +190,38 @@
     ],
     "sampleData": [
       {
+        "date": "2025-06-17",
+        "city": "London",
+        "country": "GB",
+        "temperature": 22,
+        "humidity": 75,
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      },
+      {
+        "date": "2025-06-16",
+        "city": "London",
+        "country": "GB",
+        "temperature": 25,
+        "humidity": 76,
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      },
+      {
+        "date": "2025-06-15",
+        "city": "London",
+        "country": "GB",
+        "temperature": 19,
+        "humidity": 71,
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      },
+      {
         "date": "2025-06-14",
         "city": "London",
         "country": "GB",
         "temperature": 17,
-        "humidity": 68,
+        "humidity": 63,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -202,8 +229,8 @@
         "date": "2025-06-13",
         "city": "London",
         "country": "GB",
-        "temperature": 18,
-        "humidity": 72,
+        "temperature": 24,
+        "humidity": 79,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -211,8 +238,8 @@
         "date": "2025-06-12",
         "city": "London",
         "country": "GB",
-        "temperature": 18,
-        "humidity": 74,
+        "temperature": 17,
+        "humidity": 73,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -220,8 +247,8 @@
         "date": "2025-06-11",
         "city": "London",
         "country": "GB",
-        "temperature": 23,
-        "humidity": 66,
+        "temperature": 17,
+        "humidity": 61,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -229,8 +256,8 @@
         "date": "2025-06-10",
         "city": "London",
         "country": "GB",
-        "temperature": 16,
-        "humidity": 77,
+        "temperature": 25,
+        "humidity": 79,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -238,8 +265,8 @@
         "date": "2025-06-09",
         "city": "London",
         "country": "GB",
-        "temperature": 25,
-        "humidity": 61,
+        "temperature": 24,
+        "humidity": 80,
         "latitude": 51.5074,
         "longitude": -0.1278
       },
@@ -247,35 +274,8 @@
         "date": "2025-06-08",
         "city": "London",
         "country": "GB",
-        "temperature": 15,
-        "humidity": 62,
-        "latitude": 51.5074,
-        "longitude": -0.1278
-      },
-      {
-        "date": "2025-06-07",
-        "city": "London",
-        "country": "GB",
-        "temperature": 24,
-        "humidity": 68,
-        "latitude": 51.5074,
-        "longitude": -0.1278
-      },
-      {
-        "date": "2025-06-06",
-        "city": "London",
-        "country": "GB",
-        "temperature": 20,
-        "humidity": 63,
-        "latitude": 51.5074,
-        "longitude": -0.1278
-      },
-      {
-        "date": "2025-06-05",
-        "city": "London",
-        "country": "GB",
         "temperature": 19,
-        "humidity": 64,
+        "humidity": 68,
         "latitude": 51.5074,
         "longitude": -0.1278
       }
@@ -289,7 +289,7 @@
     "sourceUrl": "",
     "format": "JSON",
     "license": "Private",
-    "lastUpdated": "2025-06-14T17:10:56.148Z",
+    "lastUpdated": "2025-06-17T08:35:45.717Z",
     "records": 5200,
     "hasGeospatialData": true,
     "schema": [
@@ -336,61 +336,91 @@
     ],
     "sampleData": [
       {
+        "date": "2025-06-17",
+        "location": "Singapore",
+        "pm25": 24,
+        "pm10": 39,
+        "temperature": 30,
+        "riskLevel": "Moderate",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      {
+        "date": "2025-06-16",
+        "location": "Singapore",
+        "pm25": 33,
+        "pm10": 32,
+        "temperature": 23,
+        "riskLevel": "Moderate",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      {
+        "date": "2025-06-15",
+        "location": "Singapore",
+        "pm25": 23,
+        "pm10": 28,
+        "temperature": 22,
+        "riskLevel": "Moderate",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      {
         "date": "2025-06-14",
         "location": "Singapore",
-        "pm25": 20,
-        "pm10": 34,
-        "temperature": 27,
-        "riskLevel": "Low",
+        "pm25": 23,
+        "pm10": 29,
+        "temperature": 16,
+        "riskLevel": "Moderate",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-13",
         "location": "Singapore",
-        "pm25": 14,
-        "pm10": 24,
-        "temperature": 18,
-        "riskLevel": "Low",
-        "latitude": 1.3521,
-        "longitude": 103.8198
-      },
-      {
-        "date": "2025-06-12",
-        "location": "Singapore",
-        "pm25": 38,
-        "pm10": 40,
+        "pm25": 39,
+        "pm10": 42,
         "temperature": 22,
         "riskLevel": "High",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
+        "date": "2025-06-12",
+        "location": "Singapore",
+        "pm25": 26,
+        "pm10": 49,
+        "temperature": 20,
+        "riskLevel": "Moderate",
+        "latitude": 1.3521,
+        "longitude": 103.8198
+      },
+      {
         "date": "2025-06-11",
         "location": "Singapore",
-        "pm25": 38,
-        "pm10": 40,
-        "temperature": 25,
-        "riskLevel": "High",
+        "pm25": 10,
+        "pm10": 28,
+        "temperature": 17,
+        "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-10",
         "location": "Singapore",
-        "pm25": 36,
-        "pm10": 33,
-        "temperature": 16,
-        "riskLevel": "High",
+        "pm25": 19,
+        "pm10": 53,
+        "temperature": 20,
+        "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198
       },
       {
         "date": "2025-06-09",
         "location": "Singapore",
-        "pm25": 10,
-        "pm10": 44,
-        "temperature": 17,
+        "pm25": 11,
+        "pm10": 58,
+        "temperature": 27,
         "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198
@@ -398,151 +428,12 @@
       {
         "date": "2025-06-08",
         "location": "Singapore",
-        "pm25": 31,
-        "pm10": 60,
+        "pm25": 14,
+        "pm10": 45,
         "temperature": 19,
-        "riskLevel": "Moderate",
-        "latitude": 1.3521,
-        "longitude": 103.8198
-      },
-      {
-        "date": "2025-06-07",
-        "location": "Singapore",
-        "pm25": 13,
-        "pm10": 49,
-        "temperature": 28,
         "riskLevel": "Low",
         "latitude": 1.3521,
         "longitude": 103.8198
-      },
-      {
-        "date": "2025-06-06",
-        "location": "Singapore",
-        "pm25": 19,
-        "pm10": 46,
-        "temperature": 17,
-        "riskLevel": "Low",
-        "latitude": 1.3521,
-        "longitude": 103.8198
-      },
-      {
-        "date": "2025-06-05",
-        "location": "Singapore",
-        "pm25": 13,
-        "pm10": 23,
-        "temperature": 21,
-        "riskLevel": "Low",
-        "latitude": 1.3521,
-        "longitude": 103.8198
-      }
-    ]
-  },
-  {
-    "id": "1750089503399",
-    "name": "LeAi Feedback System (Responses)",
-    "description": "Uploaded dataset with 189 records",
-    "category": "User Uploaded",
-    "source": "User Upload",
-    "sourceUrl": "",
-    "format": "XLSX",
-    "license": "Private",
-    "lastUpdated": "2025-06-16T15:58:23.399Z",
-    "records": 189,
-    "hasGeospatialData": false,
-    "schema": [
-      {
-        "name": "Timestamp",
-        "type": "number",
-        "description": "Field Timestamp"
-      },
-      {
-        "name": "Rate Your Experience on a scale of 1-10",
-        "type": "number",
-        "description": "Field Rate Your Experience on a scale of 1-10"
-      },
-      {
-        "name": "What do you like the most AND What should we improve? ",
-        "type": "string",
-        "description": "Field What do you like the most AND What should we improve? "
-      },
-      {
-        "name": "NAME",
-        "type": "string",
-        "description": "Field NAME"
-      },
-      {
-        "name": "I agree to use my feedback as a testimonial.",
-        "type": "string",
-        "description": "Field I agree to use my feedback as a testimonial."
-      }
-    ],
-    "sampleData": [
-      {
-        "Timestamp": 45783.467709375,
-        "Rate Your Experience on a scale of 1-10": 9,
-        "What do you like the most AND What should we improve? ": "Nil",
-        "NAME": "Henry",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.60604012731,
-        "Rate Your Experience on a scale of 1-10": 8,
-        "What do you like the most AND What should we improve? ": "Testing from Vic ",
-        "NAME": "Vicode",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.631198414354,
-        "Rate Your Experience on a scale of 1-10": 10,
-        "NAME": "Elizabeth Olajumoke",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.63722275463,
-        "Rate Your Experience on a scale of 1-10": 10,
-        "What do you like the most AND What should we improve? ": "You should improve in technology ",
-        "NAME": "Ayoola esther moyinoluwa ",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.63995221065,
-        "Rate Your Experience on a scale of 1-10": 10,
-        "NAME": "Ayoola esther moyinoluwa ",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.65217858796,
-        "Rate Your Experience on a scale of 1-10": 10,
-        "What do you like the most AND What should we improve? ": "You are doing well but work on giving the correction after the test",
-        "NAME": "Fabunmi Elizabeth Faith ",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.66151694444,
-        "Rate Your Experience on a scale of 1-10": 9,
-        "NAME": "Adedara Motunrayo Eunice ",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.66481736111,
-        "Rate Your Experience on a scale of 1-10": 10,
-        "What do you like the most AND What should we improve? ": "More explanation ",
-        "NAME": "Rafiu Roqeebat",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.74380524305,
-        "Rate Your Experience on a scale of 1-10": 5,
-        "What do you like the most AND What should we improve? ": "Everything ",
-        "NAME": "U really did well ",
-        "I agree to use my feedback as a testimonial.": "Yes"
-      },
-      {
-        "Timestamp": 45783.7520287963,
-        "Rate Your Experience on a scale of 1-10": 10,
-        "What do you like the most AND What should we improve? ": "Everything ",
-        "NAME": "Good ",
-        "I agree to use my feedback as a testimonial.": "Yes"
       }
     ]
   }
