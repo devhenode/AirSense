@@ -53,7 +53,7 @@ const LocationSearchPage = () => {
     setError(null);
       try {
       // Get API base URL from environment variable or use relative path
-      const apiBaseUrl = import.meta.env.VITE_API_URL || '';
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
       console.log('Searching locations using API:', `${apiBaseUrl}/api/locations/search?query=${encodeURIComponent(searchQuery)}`);
       
       const response = await fetch(`${apiBaseUrl}/api/locations/search?query=${encodeURIComponent(searchQuery)}`);
@@ -79,7 +79,7 @@ const LocationSearchPage = () => {
     setError(null);
       try {
       // Get API base URL from environment variable or use relative path
-      const apiBaseUrl = import.meta.env.VITE_API_URL || '';
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
       console.log('Analyzing location using API:', `${apiBaseUrl}/api/environmental/analyze-location`);
       
       const response = await fetch(`${apiBaseUrl}/api/environmental/analyze-location`, {

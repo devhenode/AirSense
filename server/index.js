@@ -10,7 +10,13 @@ const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://frontend-dot-mongodb-analyzer.ew.r.appspot.com',
+    'http://localhost:3000'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Use fallback to local MongoDB if Atlas connection fails
