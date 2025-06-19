@@ -6,11 +6,12 @@
   "homepage": "https://devhenode.github.io/airsense/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gcloud app deploy --quiet --env-vars-file .env.yaml"
+    "deploy": "gcloud app deploy --quiet",
+    "deploy:all": "npm run build && gcloud app deploy && cd server && gcloud app deploy && cd .. && gcloud app deploy dispatch.yaml"
   },
   "dependencies": {
     "chart.js": "^4.4.9",

@@ -13,11 +13,22 @@ const app = express();
 app.use(cors({
   origin: [
     'https://frontend-dot-mongodb-analyzer.ew.r.appspot.com',
-    'http://localhost:3000'
+    'https://mongodb-analyzer.ew.r.appspot.com',
+    'http://localhost:3000',
+    'http://localhost:5173'
   ],
   credentials: true
 }));
 app.use(express.json());
+
+// Health check endpoint for App Engine
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    env: process.env.NODE_ENV || 'development'
+  });
+});
 
 // Use fallback to local MongoDB if Atlas connection fails
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
