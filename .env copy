@@ -1,0 +1,11 @@
+MONGODB_URI=mongodb+srv://Henode:A8sN2boBlLMPdKgc@cluster0.q0vzejg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&tlsAllowInvalidCertificates=true
+MONGODB_DB=analysis_results
+MONGODB_COLLECTION=datasets
+OPENWEATHER_API_KEY=d75e9d914c93fc773059a8af6b4ada39
+PORT=5000
+VITE_API_URL=http://localhost:5000
+VITE_API_BASE_URL=https://mongodb-analyzer.ew.r.appspot.com/
+VITE_APP_NAME=AirSense
+GEMINI_API_KEY=AIzaSyApcBTbS09jI4W3y6_X7YvsTa0oIl5IWfA
+
+# PasswordUserdb
